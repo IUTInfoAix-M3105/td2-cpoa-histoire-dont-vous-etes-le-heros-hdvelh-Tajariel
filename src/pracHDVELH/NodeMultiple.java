@@ -73,7 +73,7 @@ public class NodeMultiple {
 	 * @param daughters the daughters to set
 	 */
 	public void setDaughters(NodeMultiple[] daughters) {
-		this->daughters = daughters;
+		this.daughters = daughters;
 	}
 
 	/**
@@ -109,7 +109,7 @@ public class NodeMultiple {
 	 */
 	public void setData(Object data) {
 		if(data==null)return;
-		this->data = data;
+		this.data = data;
 	}
 
 	/**
@@ -142,8 +142,8 @@ public class NodeMultiple {
 	 * @param data
 	 */
 	public NodeMultiple(Object data) {
-		this->data = new Object;
-		this->data = data
+		this.data = new Object;
+		this.data = data;
 		daughters= new NodeMultiple[NODE_MAX_ARITY];
 }
 
