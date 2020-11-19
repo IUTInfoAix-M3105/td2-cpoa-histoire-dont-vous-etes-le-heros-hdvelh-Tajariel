@@ -7,6 +7,7 @@ package pracHDVELH;
 
 import java.util.Scanner;
 
+import jdk.internal.org.jline.reader.impl.history.DefaultHistory;
 import myUtils.ErrorNaiveHandler;
 
 /**
@@ -17,13 +18,32 @@ public class Event extends NodeMultiple {
 	public static final String ERROR_MSG_UNEXPECTED_END = "Sorry, for some unexpected reason the story ends here...";
 	public static final String PROMPT_ANSWER = "Answer: ";
 	public static final String WARNING_MSG_INTEGER_EXPECTED = "Please input a integer within range!";
-
+	private String playerAnswer;
+	private Scanner reader;
+	private int chosenPath;
+	private int i;
+	private GUIManager gui;
+	static private int lastId=;
 	/**
 	 * @return the playerAnswer
 	 */
 	public String getPlayerAnswer() {
-		/* TO BE COMPLETED */
+		
 	}
+	
+	public Event() {
+		this(new GUIManager(),null);
+	}
+	
+	public Event(GUIManager gui,String data) {
+		super(data);
+		this.gui=gui;
+		id = ++lastId;
+		chosenPath=0;
+		reader=gui.getInputReader();
+			
+	}
+	
 
 	/**
 	 * @param playerAnswer the playerAnswer to set
